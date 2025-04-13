@@ -8,7 +8,7 @@ public class JogoDaForcaGUI extends JFrame {
     private JTextArea areaTexto;
     private JButton botaoEnviar, botaoSalvar, botaoNovoJogo;
 
-    private String[] palavras = {"JAVA", "PROGRAMACAO", "DESENVOLVIMENTO", "ALGORITMO", "COMPUTADOR"};
+    private String[] palavras = {"JAVA", "PROGRAMACAO", "DESENVOLVIMENTO", "ALGORITMO", "COMPUTADOR"}; //! Puxar palavras do MySQL
     private String palavraEscolhida;
     private StringBuilder palavraAdivinhada;
     private char[] letrasUsadas;
@@ -48,7 +48,7 @@ public class JogoDaForcaGUI extends JFrame {
         botaoSalvar.addActionListener(e -> salvarJogo());
         botaoNovoJogo.addActionListener(e -> novoJogo());
 
-        // Adicionando KeyListener para o campo de texto (inputLetra)
+        //! Adicionando KeyListener para o campo de texto (inputLetra)
         inputLetra.addActionListener(e -> jogarRodada());
 
         carregarJogo();
@@ -66,7 +66,7 @@ public class JogoDaForcaGUI extends JFrame {
         jogoEmAndamento = true;
         atualizarTela();
 
-        // Apagar o arquivo de save ao iniciar um novo jogo
+        //! Apagar o arquivo de save ao iniciar um novo jogo
         File arquivo = new File("forca_save.txt");
         if (arquivo.exists()) {
             arquivo.delete();
@@ -121,7 +121,7 @@ public class JogoDaForcaGUI extends JFrame {
         StringBuilder sb = new StringBuilder();
         sb.append("Palavra: ");
         
-        // Adiciona um espaço após cada caractere
+        //! Adiciona um espaço após cada caractere
         for (int i = 0; i < palavraAdivinhada.length(); i++) {
             sb.append(palavraAdivinhada.charAt(i)).append(" ");
         }
@@ -173,7 +173,7 @@ public class JogoDaForcaGUI extends JFrame {
         }
     }
 
-    // Herança e polimorfismo com classe abstrata simples
+    //! Herança e polimorfismo com classe abstrata simples
     abstract static class Jogo {
         abstract void iniciar();
     }
