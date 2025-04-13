@@ -8,7 +8,7 @@ public class JogoDaForcaGUI extends JFrame {
     private JTextArea areaTexto;
     private JButton botaoEnviar, botaoSalvar, botaoNovoJogo;
 
-    private String[] palavras = {"JAVA", "PROGRAMACAO", "DESENVOLVIMENTO", "ALGORITMO", "COMPUTADOR"}; //! Puxar palavras do MySQL
+    private String[] palavras = {"JAVA", "PROGRAMACAO", "DESENVOLVIMENTO", "ALGORITMO", "COMPUTADOR"}; //! Puxar palavras de um .txt
     private String palavraEscolhida;
     private StringBuilder palavraAdivinhada;
     private char[] letrasUsadas;
@@ -28,7 +28,7 @@ public class JogoDaForcaGUI extends JFrame {
         add(new JScrollPane(areaTexto), BorderLayout.CENTER);
 
         JPanel painelInferior = new JPanel();
-        painelInferior.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10)); // Garantir espaçamento adequado
+        painelInferior.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10)); //! Garantir espaçamento adequado
 
         inputLetra = new JTextField(5);
         botaoEnviar = new JButton("Enviar");
