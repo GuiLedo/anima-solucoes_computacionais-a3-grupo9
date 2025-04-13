@@ -12,15 +12,14 @@ public class JogoDaForcaGUI extends JFrame {
     private String palavraEscolhida;
     private StringBuilder palavraAdivinhada;
     private char[] letrasUsadas;
-    private int tentativas;
-    private int tamanhoLetrasUsadas;
+    private int tentativas, tamanhoLetrasUsadas;
     private boolean jogoEmAndamento;
 
     public JogoDaForcaGUI() {
         super("Jogo da Forca");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(500, 400); // Tamanho da janela ajustado
+        setSize(500, 400); //! Tamanho da janela ajustado
         setLayout(new BorderLayout());
 
         areaTexto = new JTextArea();
@@ -183,7 +182,6 @@ public class JogoDaForcaGUI extends JFrame {
             new JogoDaForcaGUI();
         }
     }
-
     public static void main(String[] args) {
         new ForcaSimples().iniciar();
     }
